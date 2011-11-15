@@ -38,5 +38,22 @@ public class IntStack {
 
 		return "[ " + head.getValue() + toString(head.getNext());
 	}
+
+	private boolean equals(Node thisn, Node othern) {
+		if (thisn == null && othern == null)
+			return true;
+		// an diesem Punkt sind auf keinen Fall BEIDE null.
+		if (thisn == null || othern == null)
+			return false;
+
+		return (thisn.getValue() == othern.getValue()) && equals(thisn.getNext(), othern.getNext());
+	}
+
+	public boolean equals(IntStack other) {
+		if (this == other)
+			return true;
+
+		return equals(this.head, other.head);
+	}
 }
 
