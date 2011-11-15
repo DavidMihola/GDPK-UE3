@@ -1,0 +1,13 @@
+4.2 Aufwandsabschätzung
+
+pop()
+konstanter Aufwand weil keine Schleifen oder rekursiven Aufrufe darin vorkommen, die aufgerufenen Funktionen Node.getValue() und Node.getNext() haben auch nur konstanten Aufwand.
+
+plus()
+konstanter Aufwand, aus den selben Gründen wie bei pop() angegeben.
+
+toString()
+Aufwand steigt linear an, jedes weiter Element das auf dem Stack liegt verlangt ein wenig Aufwand mehr
+
+equals()
+Aufwand steigt linear an, aus den selben Gründen wie bei toString(), allerdings kann ein großer Stack unter Umständen schon sehr früh, nämlich am ersten unterschiedlichen Element, als nicht äquivalent erkannt werden.
