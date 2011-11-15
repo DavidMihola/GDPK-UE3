@@ -25,5 +25,18 @@ public class IntStack {
 	void neg() {
 		this.push(this.pop() * (-1));
 	}
+
+	private String toString(Node n) {
+		if (n == null)
+			return " ]";
+		return " , " + n.getValue() + toString(n.getNext());
+	}
+
+	public String toString() {
+		if (head == null)
+			return "[]";
+
+		return "[ " + head.getValue() + toString(head.getNext());
+	}
 }
 
