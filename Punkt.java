@@ -16,8 +16,12 @@ public class Punkt implements Verschiebbar, Skalierbar {
 		y = y * faktor;
 	}
 
-	double distanzZumUrsprung() {
+	public double distanzZumUrsprung() {
 		return Math.sqrt(x*x + y*y);
+	}
+
+	public String toString() {
+		return "(" + x + ", " + y + ")";
 	}
 }
 

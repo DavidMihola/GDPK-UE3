@@ -15,5 +15,9 @@ public class Scheibe implements Verschiebbar, Skalierbar {
 		i.skaliere(faktor);
 		r = r * faktor;
 	}
+
+	public String toString() {
+		return "(" + i + ", " + r + " )";
+	}
 }
 

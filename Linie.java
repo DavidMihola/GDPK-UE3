@@ -17,5 +17,9 @@ public class Linie implements Verschiebbar {
 		p1.skaliere(faktor);
 		p2.skaliere(faktor);
 	}
+
+	public String toString() {
+		return "( " + p1 + ", " + p2 + " )";
+	}
 }
 
